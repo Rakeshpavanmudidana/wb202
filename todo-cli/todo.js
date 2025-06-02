@@ -19,7 +19,7 @@ const todoList = () => {
   const dueToday = () => {
     const today = new Date().toISOString().split("T")[0];
     
-    return all.filter( single => single.dueDate === today ).map( single =>  ({ ...single, dueDate: null}));
+    return all.filter( single => single.dueDate === today ).map( single =>  ({ ...single, dueDate: ""}));
   }
 
   const dueLater = () => {
