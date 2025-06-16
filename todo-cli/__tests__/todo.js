@@ -1,18 +1,19 @@
 /* eslint-disable no-undef */
 const todoList = require("../todo");
 
-const {
-  all,
-  add,
-  markAsComplete,
-  overdue,
-  dueToday,
-  dueLater,
-  // toDisplayableList,
-} = todoList();
 let today = "";
+
+let all, add, markAsComplete, overdue, dueToday, dueLater;
 describe("TodoList test Suite", () => {
-  beforeAll(() => {
+  beforeEach(() => {
+    const todos = todoList();
+    all = todos.all;
+    add = todos.add;
+    markAsComplete = todos.markAsComplete;
+    overdue = todos.overdue;
+    dueToday = todos.dueToday;
+    dueLater = todos.dueLater;
+
     today = new Date().toISOString().split("T")[0];
     add({
       title: "Test todo",
