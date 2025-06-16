@@ -6,11 +6,11 @@
     "test": "jest"
   },
   "lint-staged": {
-  "*.js": [
-    "eslint",
-    "prettier --write ."
-  ]
-},
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
+  },
   "author": "",
   "license": "ISC",
   "description": "",
